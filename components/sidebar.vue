@@ -54,12 +54,8 @@ try {
     <div class="mb-5">
       <NuxtLink class="text-green-600" to="/"><span>Add Vocab</span></NuxtLink>
     </div>
-    <div v-for="vocabItem in vocab" class="flex flex-col gap-5">
-      <div
-        :key="vocabItem.id"
-        class="text-lg flex flex-row items-center justify-between"
-        @contextmenu.prevent="onContextMenu"
-      >
+    <div v-for="vocabItem in vocab" :key="vocabItem.id" class="flex flex-col gap-5">
+      <div class="text-lg flex flex-row items-center justify-between" @contextmenu.prevent="onContextMenu">
         <NuxtLink
           :data-word-id="vocabItem.id"
           class="truncate"
